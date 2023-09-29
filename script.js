@@ -12,10 +12,18 @@ let passObj = {};
 let pass = [];
 
 // PROMPT for password length (8-122) || ALERT if not valid
+let passwordLength = prompt("Enter the password length (between 8 and 128 characters):");
+while (!(passwordLength >= 8 && passwordLength <= 128)) {
+    alert("Please enter a valid password length between 8 and 128 characters.");
+}
 // PROMPT for Upper Case => passwordArr
+let includeUppCase = confirm("Include uppercase letters?");
 // PROMPT for Lower Case => passwordArr 
+let includeLowCase = confirm("Include lowercase letters?");
 // PROMPT for Number => passwordArr
+let includeNumbr = confirm("Include numbers?");
 // PROMPT for Symbol => passwordArr
+let includeSymbol = confirm("Include symbols?");
 
 // Write password to the #password input
 function writePassword() {
